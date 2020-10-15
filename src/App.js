@@ -87,7 +87,7 @@ class App extends React.Component {
   onButtonSubmit = () => {
     // console.log('clicked');
     this.setState({ imageUrl: this.state.input });
-    fetch('https://tho6-smartbrain.herokuapp.com/imageurl', { // fetch backend
+    fetch('https://tho6-smartbrain-server.herokuapp.com/imageurl', { // fetch backend
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -99,7 +99,7 @@ class App extends React.Component {
         // do something with response
         // console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
         if (response) { // as long as we have response
-          fetch('https://tho6-smartbrain.herokuapp.com/image', { // fetch backend
+          fetch('https://tho6-smartbrain-server.herokuapp.com/image', { // fetch backend
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
