@@ -125,7 +125,6 @@ class App extends React.Component {
   }
 
 
-
   onRouteChange = (route) => {
     if (route === 'signout') {
       this.setState(initialState)
